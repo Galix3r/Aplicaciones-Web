@@ -1,0 +1,76 @@
+body {
+  background-color: #0b0b0e;
+  color: #e0e0e0;
+  font-family: 'Roboto', sans-serif;
+  margin: 5;
+}
+.contenedor{
+
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+.mi-menu{
+
+  background-color: #121216;
+  padding: 12px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid #222;
+
+}
+.mi-menu .contenedor{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; 
+  gap: 15px;
+
+}
+.logo-marca{
+   display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+}
+.lista-menu{
+
+  list-style: none;
+  display: flex;
+  gap: 25px; 
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+.lista-menu a{
+
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: color 0.3s;
+
+}
+.lista-menu a:hover{
+  color: #8c4eaf;
+}
+.banner {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(11,11,14,0.8)),
+  url(../img/todas\ las\ imagenes/epico.jpg)
+  ;
+  min-height: 140vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 200px 20px 160px 20px;
+}
