@@ -2,17 +2,15 @@ body {
   background-color: #0b0b0e;
   color: #e0e0e0;
   font-family: 'Roboto', sans-serif;
-  margin: 5;
+  margin: 0;
 }
-.contenedor{
 
+.contenedor {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-
 }
-.mi-menu{
-
+.mi-menu {
   background-color: #121216;
   padding: 12px 0;
   position: fixed;
@@ -20,18 +18,18 @@ body {
   width: 100%;
   z-index: 1000;
   border-bottom: 1px solid #222;
-
 }
-.mi-menu .contenedor{
+
+.mi-menu .contenedor {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap; 
   gap: 15px;
-
 }
-.logo-marca{
-   display: flex;
+
+.logo-marca {
+  display: flex;
   align-items: center;
   gap: 10px;
   color: #fff;
@@ -40,37 +38,499 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.1rem;
 }
-.lista-menu{
 
+.lista-menu {
   list-style: none;
   display: flex;
-  gap: 25px; 
+  gap: 25px;
   margin: 0;
   padding: 0;
   align-items: center;
   flex-wrap: wrap;
-
 }
-.lista-menu a{
 
+.lista-menu a {
   color: #ccc;
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 600;
   transition: color 0.3s;
+}
 
+.lista-menu a:hover {
+  color: #00d2ff;
 }
-.lista-menu a:hover{
-  color: #8c4eaf;
-}
+
 .banner {
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(11,11,14,0.8)),
-  url(../img/todas\ las\ imagenes/epico.jpg)
-  ;
-  min-height: 140vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(11, 11, 14, 0.8)), 
+              url('../img/todas las imagenes/epico.jpg') center center / cover no-repeat;
+  min-height: 120vh; 
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 200px 20px 160px 20px;
+  padding: 200px 20px 160px 20px; 
 }
+
+.subtitulo {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+}
+
+.titulo-principal {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.autor {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.boton {
+  display: inline-block;
+  padding: 10px 25px;
+  border: 2px solid #ffffff;
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.boton:hover {
+  background: #ffffff;
+  color: #000;
+}
+.seccion {
+  padding: 60px 0;
+}
+.titulo-seccion, h2 {
+  text-align: center;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+}
+
+.fila-tarjetas, .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.fila-tarjetas {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .fila-tarjetas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .fila-tarjetas {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.tarjeta {
+  background: #16161c;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  transition: transform 0.3s;
+  border: 1px solid #222;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.caja-texto {
+  padding: 20px;
+}
+
+.tarjeta h3 {
+  color: #fbfbfb;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.fecha {
+  color: #c757ff;
+  font-size: 0.85rem;
+}
+
+.descripcion {
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.boton-tarjeta {
+  display: inline-block;
+  padding: 6px 15px;
+  border: 1px solid #c757ff;
+  color: #fbfbfb;
+  border-radius: 15px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: 0.3s;
+}
+
+.boton-tarjeta:hover {
+  background: #c757ff;
+  color: #000;
+}
+
+
+
+.seccion-galeria {
+  background: #050507;
+  padding: 60px 0;
+}
+
+.texto-centro {
+  text-align: center;
+  color: #888;
+  margin-bottom: 30px;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.foto-item {
+  height: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.foto-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.foto-item img:hover {
+  transform: scale(1.05);
+}
+
+.pie-pagina {
+  background: #121216;
+  padding: 50px 0 20px;
+  border-top: 1px solid #222;
+}
+
+.fila-footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.columna-footer h3 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.columna-footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.columna-footer ul li a {
+  color: #888;
+  text-decoration: none;
+}
+
+.columna-footer ul li a:hover {
+  color: #fff;
+}
+
+.iconos-redes {
+  display: flex;
+  gap: 15px;
+  font-size: 1.2rem;
+  color: #00d2ff;
+}
+
+.derechos {
+  text-align: center;
+  color: #666;
+  font-size: 0.85rem;
+  border-top: 1px solid #222;
+  padding-top: 20px;
+}
+.contenedor-video {
+  width: 100%;
+  max-width: 900px; 
+  margin: 30px auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.video-responsive {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+}
+
+
+/**/
+.tarjeta {
+  position: relative;
+  background: linear-gradient(145deg, #16161c, #0f0f13);
+  border: 1px solid #2a2a35;
+  transition: all 0.4s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 210, 255, 0.15);
+}
+
+/* Diseños exclusivos para la página de Boletos */
+.pagina-boletos .tarjeta:hover {
+  border-color: #d7e201;
+  box-shadow: 0 12px 30px rgba(215, 226, 1, 0.2);
+}
+
+.pagina-boletos .fecha {
+  background-color: rgba(215, 226, 1, 0.1);
+  color: #d7e201;
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  font-size: 0.75rem;
+}
+
+.pagina-boletos .precio-boleto {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin: 15px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.pagina-boletos .boton-tarjeta {
+  display: block;
+  text-align: center;
+  padding: 12px;
+  background: linear-gradient(135deg, #d7e201, #b3c000);
+  color: #000;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.pagina-boletos .boton-tarjeta:hover {
+  background: linear-gradient(135deg, #e5f202, #d7e201);
+  box-shadow: 0 0 15px rgba(215, 226, 1, 0.4);
+}
+
+
+/* Diseños exclusivos para la Tienda en Línea */
+.pagina-tienda .tarjeta:hover {
+  border-color: #00d2ff;
+  box-shadow: 0 12px 30px rgba(0, 210, 255, 0.2);
+}
+
+.pagina-tienda .fecha {
+  background-color: rgba(0, 210, 255, 0.1);
+  color: #00d2ff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  font-size: 0.75rem;
+}
+
+.pagina-tienda .precio-producto {
+  color: #00d2ff;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 15px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.pagina-tienda .boton-tarjeta {
+  display: block;
+  text-align: center;
+  padding: 12px;
+  background: transparent;
+  border: 2px solid #00d2ff;
+  color: #00d2ff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.pagina-tienda .boton-tarjeta:hover {
+  background-color: #00d2ff;
+  color: #000;
+  box-shadow: 0 0 15px rgba(0, 210, 255, 0.4);
+}
+/*carrito*/
+/* ==========================================
+   ESTILOS PARA EL CARRITO DE COMPRAS
+   ================================---------- */
+.seccion-carrito {
+  background-color: #16161c;
+  border: 1px solid #00d2ff;
+  border-radius: 10px;
+  padding: 25px;
+  margin-top: 50px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 5px 20px rgba(0, 210, 255, 0.15);
+}
+
+.lista-carrito {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.item-carrito {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #222;
+  font-size: 0.95rem;
+}
+
+.total-carrito {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  padding-top: 15px;
+  border-top: 2px solid #00d2ff;
+  margin-top: 10px;
+}
+
+.acciones-carrito {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn-vaciar {
+  flex: 1;
+  padding: 10px;
+  background: transparent;
+  border: 1px solid #ff4d4d;
+  color: #ff4d4d;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-vaciar:hover {
+  background: #ff4d4d;
+  color: #fff;
+}
+
+.btn-pagar {
+  flex: 2;
+  padding: 10px;
+  background: #00d2ff;
+  border: none;
+  color: #000;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-pagar:hover {
+  background: #00a2c7;
+}
+
+/*Style de Galeria de las imgenes*/
+.titulo-galeria {
+            text-align: center;
+            margin: 30px 0 10px;
+            color: #00d2ff;
+        }
+
+        .grid-galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1100px;
+            margin: 20px auto 50px;
+            padding: 0 20px;
+        }
+
+        .tarjeta-foto {
+            background-color: #181818;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #333;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .tarjeta-foto:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 210, 255, 0.2);
+        }
+
+        .tarjeta-foto img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .info-foto {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .info-foto h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        .info-foto p {
+            font-size: 0.85rem;
+            color: #aaa;
+        }
