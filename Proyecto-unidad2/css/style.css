@@ -843,3 +843,50 @@ footer {
   height: 400px; 
   object-fit: cover;
 }
+
+/*pie de pagina */
+.pie-pagina {
+    background-color: #08080a;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 30px 20px;
+    margin-top: 50px;
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+
+.contenedor-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.texto-footer {
+    margin: 0;
+    color: #aaa;
+}
+
+.enlaces-footer {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.enlaces-footer a {
+    color: #00d2ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.enlaces-footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.separador {
+    color: #444;
+}

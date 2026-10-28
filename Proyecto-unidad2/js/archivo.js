@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     resultado.style.color = "#51cf66";
 
     setTimeout(()=>{
-      window.location.href="paguinaPrincipal.html"
+      window.location.href="index.html"
     })
     formulario.reset();
   });
