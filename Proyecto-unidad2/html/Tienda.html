@@ -10,28 +10,28 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body class="pagina-tienda">
- <header class="mi-menu">
-        <div class="contenedor">
-            <a class="logo-marca" href="PaguinaPrincipal.html">
-                <img src="../img/todas las imagenes/miami-logo-2.png" alt="Logo Ultra" height="40">
-                <span>+x FESTIVALS</span>
-            </a>
-            <nav>
-                <ul class="lista-menu">
-                    <li><a href="PaguinaPrincipal.html">Inicio</a></li>
-                    <li><a href="Boletos.html">Boletos</a></li>
-                    <li><a href="galeria de imagenes/Galeria.html">Galería</a></li>
-                    <li><a href="Tienda.html">Tienda</a></li>
-                    <li><a href="pie de pagina/pulp.html">Diviértete</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<header class="mi-menu">
+    <div class="contenedor">
+        <a class="logo-marca" href="PaguinaPrincipal.html">
+            <img src="../img/todas las imagenes/miami-logo-2.png" alt="Logo Ultra" height="40">
+        </a>
+        <nav>
+            <ul class="lista-menu">
+                <li><a href="PaguinaPrincipal.html">Inicio</a></li>
+                <li><a href="Boletos.html">Boletos</a></li>
+                <li><a href="Galeria.html">Galería de Imagenes</a></li>
+                <li><a href="Tienda.html">Tienda</a></li>
+                <li><a href="Artistas.html">Artistas</a></li>
+               
+            </ul>
+        </nav>
+    </div>
+</header>
 
     <!-- SECCIÓN DE TIENDA -->
     <section class="seccion">
         <div class="contenedor">
-            <h2 class="titulo-seccion rock-salt-regular">⚡ Tienda Oficial</h2>
+            <h2 class="titulo-seccion rock-salt-regular"> Tienda Oficial</h2>
             <p style="text-align: center; color: #888; margin-bottom: 40px;"> Llévate la mercancía exclusiva del tour mundial. </p>
 
             <div class="fila-tarjetas">
@@ -69,22 +69,18 @@
                 </div>
             </div>
 
-            <!-- SECCIÓN DEL CARRITO DE COMPRAS -->
             <div class="seccion-carrito-simple">
                 <h3 class="rock-salt-regular" style="color: #00d2ff; text-align: center; margin-bottom: 20px;">🛒 Tu Carrito</h3>
                 
-                <!-- Lista donde se van agregando los productos -->
                 <ul id="lista-carrito" style="list-style: none; padding: 0; margin-bottom: 15px;">
                     <li id="mensaje-vacio" style="color: #888; text-align: center;">El carrito está vacío.</li>
                 </ul>
 
-                <!-- Total acumulado -->
                 <div class="total-simple">
                     <span>Total:</span>
                     <span id="total-precio" class="monto-total">$0.00 MXN</span>
                 </div>
 
-                <!-- Botón de pago -->
                 <button onclick="pagar()" class="btn-pagar-simple" style="margin-top: 15px;">Pagar Ahora</button>
             </div>
 
@@ -97,34 +93,7 @@
         </div>
     </footer>
 
-    <!-- SCRIPT DEL CARRITO DE COMPRAS -->
-    <script>
-       let total = 0;
-
-        function agregarAlCarrito(nombre, precio) {
-            // 1. Ocultar el mensaje de "vacío"
-            document.getElementById('mensaje-vacio').style.display = 'none';
-
-            // 2. Crear y agregar el elemento a la lista
-            const lista = document.getElementById('lista-carrito');
-            const nuevoItem = document.createElement('li');
-            nuevoItem.style.cssText = "display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #222;";
-            nuevoItem.innerHTML = `<span>${nombre}</span> <span style="color: #00d2ff;">$${precio}.00</span>`;
-            lista.appendChild(nuevoItem);
-
-            // 3. Sumar al total y actualizar en pantalla
-            total += precio;
-            document.getElementById('total-precio').textContent = `$${total}.00 MXN`;
-        }
-
-        function pagar() {
-            if (total === 0) {
-                alert("Agrega al menos un producto al carrito.");
-            } else {
-                alert("¡Gracias por tu compra! Total: $" + total + ".00 MXN");
-            }
-        }
-    </script>
+   
 
 </body>
 </html>
