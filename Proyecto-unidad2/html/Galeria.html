@@ -1,68 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="../css/style.css" rel="stylesheet">
-    </head>
-    <body class="pagina-galeria">
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería de Fotos - Festival</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
 
-    <header class="encabezado">
-        <div class="contenedor">
-            <h1 class="logo">ElectroFest</h1>
-            <nav class="navegacion">
-                <a href="login.html">Login</a>
-                <a href="boletos.html">Boletos</a>
-                <a href="tienda.html">Tienda</a>
-                <a href="galeria.html" class="activo">Galería</a>
-                <a href="contacto.html">Contacto</a>
-            </nav>
+  <!-- Encabezado / Navegación -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">ELECTRO<span>FEST</span></div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="galeria.html" class="active">Galería</a></li>
+          <li><a href="artistas.html">Artistas</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenido de la Galería -->
+  <main>
+    <h1 class="section-title">Galería de Fotos</h1>
+    <p class="section-subtitle">Revive los mejores momentos de las ediciones pasadas.</p>
+
+    <div class="gallery-grid">
+      <!-- Foto 1 -->
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=80" alt="Escenario Principal">
+        <div class="gallery-overlay">
+          <p>Mainstage Night Show</p>
         </div>
-    </header>
+      </div>
 
-    <main>
-        <h2 class="titulo-galeria">Galería del Evento</h2>
-
-        <section class="grid-galeria">
-            <div class="tarjeta-foto">
-                <img src="../img/escenario.jpg" alt="Escenario Principal">
-                <div class="info-foto">
-                    <h3>Escenario Mainstage</h3>
-                    <p>Luces y show pirotécnico en vivo.</p>
-                </div>
-            </div>
-
-            <div class="tarjeta-foto">
-                <img src="../img/dj.jpg" alt="DJ Actuando">
-                <div class="info-foto">
-                    <h3>Presentación Especial</h3>
-                    <p>El mejor ambiente electrónico de la noche.</p>
-                </div>
-            </div>
-
-            <div class="tarjeta-foto">
-                <img src="../img/publico.jpg" alt="Público">
-                <div class="info-foto">
-                    <h3>Fanáticos</h3>
-                    <p>Miles de asistentes disfrutando de la música.</p>
-                </div>
-            </div>
-
-            <div class="tarjeta-foto">
-                <img src="../img/merch.jpg" alt="Mercancía">
-                <div class="info-foto">
-                    <h3>Tienda Oficial</h3>
-                    <p>Gorras y playeras de la edición 2026.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="pie-pagina">
-        <div class="contenedor">
-            <p>&copy; 2026 ElectroFest. Todos los derechos reservados.</p>
+      <!-- Foto 2 -->
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80" alt="DJ Set">
+        <div class="gallery-overlay">
+          <p>Live Performance</p>
         </div>
-    </footer>
-    </body>
+      </div>
+
+      <!-- Foto 3 -->
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80" alt="Público">
+        <div class="gallery-overlay">
+          <p>Crowd Energy</p>
+        </div>
+      </div>
+
+      <!-- Foto 4 -->
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=800&q=80" alt="Luces y Fuegos">
+        <div class="gallery-overlay">
+          <p>Pyro & Laser Show</p>
+        </div>
+      </div>
+
+      <!-- Foto 5 -->
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80" alt="Luces LED">
+        <div class="gallery-overlay">
+          <p>Visual Experience</p>
+        </div>
+      </div>
+
+      <!-- Foto 6 -->
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1429962714451-bb934ecdc436?auto=format&fit=crop&w=800&q=80" alt="Atmósfera">
+        <div class="gallery-overlay">
+          <p>Sunset Set</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 ElectroFest. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
 </html>
