@@ -28,64 +28,65 @@
     </div>
 </header>
 
-    <!-- SECCIÓN DE TIENDA: Agregamos style="margin-top: 100px;" para evitar que el menú tape el título -->
     <main class="seccion" style="margin-top: 100px; margin-bottom: 50px;">
         <div class="contenedor">
             <h2 class="titulo-seccion text-center fw-bold mb-2">Tienda Oficial</h2>
             <p style="text-align: center; color: #888; margin-bottom: 40px;">Llévate la mercancía exclusiva del festival.</p>
 
             <div class="fila-tarjetas">
-                <!-- PRODUCTO 1 -->
-                <div class="tarjeta">
-                    <div class="caja-texto">
-                        <span class="fecha">Más Vendido</span>
-                        <h3 style="color: #fff; margin-top: 10px; font-size: 1.4rem;">Sudadera Tour 2026</h3>
-                        <p class="descripcion">Sudadera negra de algodón afelpado con diseño exclusivo reflectante en la espalda.</p>
-                        <div class="precio-producto">$650.00 <span style="font-size: 0.9rem; color: #888;">MXN</span></div>
-                        <button class="boton-tarjeta" onclick="agregarAlCarrito('Sudadera Tour 2026', 650)">Agregar al Carrito</button>
-                    </div>
-                </div>
+    <!-- PRODUCTO 1 -->
+    <div class="tarjeta">
+        <img src="../img/todas las imagenes/sudadera.webp" alt="Sudadera Oficial ElectroFest">
+        <div class="caja-texto">
+            <span class="fecha">Más Vendido</span>
+            <h3 style="color: #fff; margin-top: 10px; font-size: 1.4rem;">Sudadera Tour 2026</h3>
+            <p class="descripcion">Sudadera negra de algodón afelpado con diseño exclusivo reflectante en la espalda.</p>
+            <div class="precio-producto">$650.00 <span style="font-size: 0.9rem; color: #888;">MXN</span></div>
+            <button class="boton-tarjeta" onclick="agregarAlCarrito('Sudadera Tour 2026', 650)">Agregar al Carrito</button>
+        </div>
+    </div>
 
-                <!-- PRODUCTO 2 -->
-                <div class="tarjeta">
-                    <div class="caja-texto">
-                        <span class="fecha">Accesorios</span>
-                        <h3 style="color: #fff; margin-top: 10px; font-size: 1.4rem;">Gorra Ajustable 3D</h3>
-                        <p class="descripcion">Gorra oficial con bordado frontal en alto relieve y broche metálico ajustable.</p>
-                        <div class="precio-producto">$320.00 <span style="font-size: 0.9rem; color: #888;">MXN</span></div>
-                        <button class="boton-tarjeta" onclick="agregarAlCarrito('Gorra Ajustable 3D', 320)">Agregar al Carrito</button>
-                    </div>
-                </div>
+    <!-- PRODUCTO 2 -->
+    <div class="tarjeta">
+        <img src="../img/todas las imagenes/gorra.webp" alt="Gorra Ajustable ElectroFest">
+        <div class="caja-texto">
+            <span class="fecha">Accesorios</span>
+            <h3 style="color: #fff; margin-top: 10px; font-size: 1.4rem;">Gorra Ajustable 3D</h3>
+            <p class="descripcion">Gorra oficial con bordado frontal en alto relieve y broche metálico ajustable.</p>
+            <div class="precio-producto">$320.00 <span style="font-size: 0.9rem; color: #888;">MXN</span></div>
+            <button class="boton-tarjeta" onclick="agregarAlCarrito('Gorra Ajustable 3D', 320)">Agregar al Carrito</button>
+        </div>
+    </div>
 
-                <!-- PRODUCTO 3 -->
-                <div class="tarjeta">
-                    <div class="caja-texto">
-                        <span class="fecha">Coleccionable</span>
-                        <h3 style="color: #fff; margin-top: 10px; font-size: 1.4rem;">Playera Edición Especial</h3>
-                        <p class="descripcion">Playera 100% algodón peinado conmemorativa con estampado de alta durabilidad.</p>
-                        <div class="precio-producto">$400.00 <span style="font-size: 0.9rem; color: #888;">MXN</span></div>
-                        <button class="boton-tarjeta" onclick="agregarAlCarrito('Playera Edición Especial', 400)">Agregar al Carrito</button>
-                    </div>
-                </div>
-            </div>
+    <!-- PRODUCTO 3 -->
+    <div class="tarjeta">
+        <img src="../img/todas las imagenes/playera.webp" alt="Playera Edición Especial ElectroFest">
+        <div class="caja-texto">
+            <span class="fecha">Coleccionable</span>
+            <h3 style="color: #fff; margin-top: 10px; font-size: 1.4rem;">Playera Edición Especial</h3>
+            <p class="descripcion">Playera 100% algodón peinado conmemorativa con estampado de alta durabilidad.</p>
+            <div class="precio-producto">$400.00 <span style="font-size: 0.9rem; color: #888;">MXN</span></div>
+            <button class="boton-tarjeta" onclick="agregarAlCarrito('Playera Edición Especial', 400)">Agregar al Carrito</button>
+        </div>
+    </div>
+</div>
 
-            <!-- CARRITO -->
-            <div class="seccion-carrito-simple mt-5 p-4 bg-secondary bg-opacity-10 rounded border border-secondary">
-                <h3 style="color: #00d2ff; text-align: center; margin-bottom: 20px;">🛒 Tu Carrito</h3>
+          <div class="seccion-carrito" style="margin-top: 40px; background-color: #16161c; border: 1px solid #00d2ff; border-radius: 10px; padding: 25px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                <h3 style="color: #00d2ff; text-align: center; margin-bottom: 20px; font-family: 'Montserrat', sans-serif;"> Tu Carrito</h3>
                 
                 <ul id="lista-carrito" style="list-style: none; padding: 0; margin-bottom: 15px;">
                     <li id="mensaje-vacio" style="color: #888; text-align: center;">El carrito está vacío.</li>
                 </ul>
 
-                <div class="total-simple d-flex justify-content-between fw-bold fs-5 mb-3">
+                <div class="total-carrito" style="display: flex; justify-content: space-between; font-size: 1.2rem; font-weight: bold; color: #fff; padding-top: 15px; border-top: 2px solid #00d2ff; margin-top: 10px;">
                     <span>Total:</span>
                     <span id="total-precio" class="monto-total">$0.00 MXN</span>
                 </div>
 
-                <button onclick="pagar()" class="btn-pagar-simple w-100 py-2 fw-bold btn btn-info">Pagar Ahora</button>
+                <button onclick="pagar()" class="btn-pagar" style="width: 100%; margin-top: 20px; padding: 12px; background: #00d2ff; border: none; color: #000; border-radius: 6px; cursor: pointer; font-weight: bold; text-transform: uppercase; font-size: 1rem; transition: 0.3s;">
+                    Pagar Ahora
+                </button>
             </div>
-
-        </div>
     </main>
 
     <footer class="pie-pagina text-center py-4 bg-black text-muted">
