@@ -626,7 +626,79 @@ header {
   color: #ff0055;
 }
 
+/* Contenido Principal */
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  width: 100%;
+  flex: 1;
+}
 
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.section-subtitle {
+  color: #888;
+  margin-bottom: 2.5rem;
+  font-size: 1rem;
+}
+.ArtistasClass{
+  margin-top: 100px;
+  padding: 20px;
+}
+
+/*css para la galeria de imagenes */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #1a1a1a;
+  aspect-ratio: 16 / 9;
+  border: 1px solid #2a2a2a;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  opacity: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-overlay p {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
 
 /*Apartado para el css para la paguina de los artistas*/
 .artists-grid {
