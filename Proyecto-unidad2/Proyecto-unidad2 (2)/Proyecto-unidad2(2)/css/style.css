@@ -1,0 +1,497 @@
+
+
+/* Reseteo global básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #0b0b0e;
+  color: #e0e0e0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Menú de navegación fijo */
+.mi-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(16, 16, 22, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.mi-menu .contenedor {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0.8rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-marca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.logo-marca img {
+  height: 40px;
+  width: auto;
+}
+
+.logo-marca span {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #a855f7;
+}
+
+.mi-menu nav {
+  display: flex;
+  align-items: center;
+}
+
+.lista-menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.lista-menu a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.lista-menu a:hover,
+.lista-menu a.active {
+  color: #00d2ff;
+}
+
+/* Contenido Principal */
+main {
+  padding-top: 130px;
+  padding-bottom: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+}
+
+/* Banner Principal */
+.banner {
+  background: linear-gradient(rgba(82, 61, 61, 0.4), rgba(11, 11, 14, 0.8)), 
+              url('../img/todas las imagenes/epico.jpg') center center / cover no-repeat;
+  min-height: 120vh; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+  width: 100%;
+}
+
+.subtitulo {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+}
+
+.titulo-principal {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  margin: 15px 0;
+}
+
+.autor {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.boton {
+  display: inline-block;
+  padding: 10px 25px;
+  border: 2px solid #ffffff;
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.boton:hover {
+  background: #ffffff;
+  color: #000;
+}
+
+/* Secciones y Títulos */
+.seccion, .ArtistasClass, .seccion-galeria {
+  padding: 40px 0;
+}
+
+.titulo-seccion, h2, .section-title {
+  text-align: center;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+}
+
+/* ==========================================
+   GALERÍA DE IMÁGENES SENCILLA Y LIMPIA
+   ========================================== */
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+.foto-item {
+  background-color: #121216;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.foto-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 210, 255, 0.25);
+}
+
+.foto-item img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
+}
+
+/*Galeria*/
+.fila-tarjetas, .row, .gallery-grid, .artists-grid, .grid-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.tarjeta, .gallery-item, .artist-card, .tarjeta-foto {
+  background: #16161c;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #2a2a35;
+  display: flex;
+  flex-direction: column;
+}
+
+.tarjeta:hover, .artist-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 210, 255, 0.2);
+}
+
+.tarjeta img, .gallery-item img, .artist-img-wrapper img, .tarjeta-foto img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.caja-texto, .artist-info, .info-foto {
+  padding: 20px;
+}
+
+.fecha {
+  color: #c757ff;
+  font-size: 0.85rem;
+}
+
+.descripcion, .artist-desc {
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.boton-tarjeta {
+  display: inline-block;
+  padding: 8px 15px;
+  border: 1px solid #c757ff;
+  color: #fbfbfb;
+  border-radius: 15px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.boton-tarjeta:hover {
+  background: #c757ff;
+  color: #000;
+}
+
+/* css para  Boletos y la Tienda */
+.pagina-boletos .precio-boleto, .pagina-tienda .precio-producto {
+  color: #00d2ff;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 15px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Carrito de tienda  */
+.seccion-carrito {
+  background-color: #16161c;
+  border: 1px solid #00d2ff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 40px auto;
+  max-width: 100%;
+  box-shadow: 0 5px 20px rgba(0, 210, 255, 0.15);
+}
+
+.lista-carrito {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.item-carrito {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #222;
+  font-size: 0.95rem;
+}
+
+.total-carrito {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  padding-top: 15px;
+  border-top: 2px solid #00d2ff;
+  margin-top: 10px;
+}
+
+.acciones-carrito {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-vaciar, .btn-pagar {
+  flex: 1;
+  min-width: 120px;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.btn-vaciar {
+  background: transparent;
+  border: 1px solid #ff4d4d;
+  color: #ff4d4d;
+}
+
+.btn-vaciar:hover {
+  background: #ff4d4d;
+  color: #fff;
+}
+
+.btn-pagar {
+  background: #00d2ff;
+  border: none;
+  color: #000;
+}
+
+.btn-pagar:hover {
+  background: #00a2c7;
+}
+
+/* CONTENEDOR DE VIDEO RESPONSIVO  */
+.contenedor-video-responsivo, .contenedor-video {
+  width: 100%;
+  max-width: 100%;
+  height: 60vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+}
+
+.contenedor-video-responsivo video, .video-responsive {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 12px;
+}
+
+/* FOOTER GLOBAL */
+.pie-pagina, footer {
+  background-color: #08080a;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 30px 20px;
+  margin-top: auto;
+  text-align: center;
+  color: #888;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.contenedor-footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.enlaces-footer {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.enlaces-footer a {
+  color: #00d2ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.enlaces-footer a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Responsive*/
+@media (max-width: 768px) {
+  .mi-menu .contenedor {
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .logo-marca {
+    justify-content: center;
+  }
+
+  .mi-menu nav {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .lista-menu {
+    justify-content: center;
+    gap: 10px 15px;
+  }
+
+  main {
+    padding-top: 140px;
+  }
+
+  .titulo-principal {
+    font-size: 2.2rem;
+  }
+
+  .banner {
+    min-height: 60vh;
+    padding: 40px 15px;
+  }
+
+  .contenedor-video-responsivo, .contenedor-video {
+    height: 40vh;
+    min-height: 220px;
+  }
+
+  .fila-tarjetas, .row, .gallery-grid, .artists-grid, .grid-galeria {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-principal {
+    font-size: 1.8rem;
+  }
+
+  .contenedor-video-responsivo, .contenedor-video {
+    height: 32vh;
+  }
+
+  .lista-menu a {
+    font-size: 0.85rem;
+  }
+}
+/*  */
+
+.titulo-seccion, h2, .section-title {
+  margin-top: 70px !important;
+  margin-bottom: 10px !important;
+  text-align: center;
+}
+.texto-centro, .section-subtitle, p.text-muted {
+  margin-bottom: 10px !important;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-top: 160px; 
+  }
+}
